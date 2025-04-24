@@ -25,42 +25,33 @@ npm run dev
 ### ⚙️ Approaches Used
 1) All tasks and team members are fetched on the Dashboard page (DashboardPage.jsx), where overallocated members are computed based on total hours of assigned tasks vs available hours (e.g., 8 hrs/day). Overallocations are visually flagged.
 
-Test Case 1
-
-John has 3 tasks due on the same day totaling 12 hours
-
-John is overallocated (limit: 8 hrs/day)
-
-Test Case 2
-
-Sarah has 2 tasks due on different days, each 4 hrs
-
-Sarah is not overallocated
+    # Test Case 1
+    
+    John has 3 tasks due on the same day totaling 12 hours
+    
+    John is overallocated (limit: 8 hrs/day)
+    
+    # Test Case 2
+    
+    Sarah has 2 tasks due on different days, each 4 hrs
+    
+    Sarah is not overallocated
 
 2) The app supports:
-
-Creating, reading, updating, and deleting Tasks
-
-Assigning multiple team members to a task
-
-Creating, updating, and removing Team Members
-
-This is managed through REST APIs in the backend and forms/modals on the frontend.
+    
+    Creating, reading, updating, and deleting Tasks
+    Assigning multiple team members to a task
+    Creating, updating, and removing Team Members
+    This is managed through REST APIs in the backend and forms/modals on the frontend.
 
 3) Used react-big-calendar to display tasks. Task bars are color-coded based on priority and urgency:
-
-if (task.state === 'Pending') {
-  if (task.priority === 'High' && dueInDays <= 2) return '#dc3545'; // red
-  if (task.priority === 'Medium' && dueInDays > 2) return '#ffc107'; // yellow
-  if (task.priority === 'Low' && dueInDays > 2) return '#ffc107'; // yellow
-}
-Explanation:
-
-High-priority & near-due → Red
-
-Medium/Low-priority → Yellow
-
-Completed or far deadlines → Green
+    # Explanation:
+    
+    High-priority & near-due → Red
+    
+    Medium/Low-priority → Yellow
+    
+    Completed or far deadlines → Green
 
 #### Challenges Faced
 
