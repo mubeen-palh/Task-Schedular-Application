@@ -11,3 +11,18 @@ This project is developed to streamline the task management process by allowing 
 - MongoDB running locally or in the cloud (e.g., MongoDB Atlas)
 
 
+
+### ⚙️ Installation
+
+#### 1. Clone the repository
+```bash
+git clone https://github.com/mubeen-palh/Task-Schedular-Application.git
+
+
+#### Backend Setup
+cd backend
+npm install
+
+
+
+
